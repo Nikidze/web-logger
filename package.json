@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "eslint": "./node_modules/.bin/eslint '**/*.{js,ts,tsx}'",
+    "eslint:fix": "./node_modules/.bin/eslint '**/*.{js,ts,tsx}' -- --fix",
+    "format": "./node_modules/.bin/prettier-eslint $PWD/'**/*.{js,ts,tsx}' --write"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Nikidze/web-logger.git"
@@ -23,5 +25,15 @@
   "bugs": {
     "url": "https://github.com/Nikidze/web-logger/issues"
   },
-  "homepage": "https://github.com/Nikidze/web-logger#readme"
+  "homepage": "https://github.com/Nikidze/web-logger#readme",
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "prettier-eslint": "^12.0.0",
+    "prettier-eslint-cli": "^5.0.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.12.0",
+    "@typescript-eslint/parser": "^4.12.0",
+    "eslint-config-airbnb-base": "^14.2.1"
+  }
 }
