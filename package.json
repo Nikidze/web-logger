@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "eslint": "./node_modules/.bin/eslint '**/*.{js,ts,tsx}'",
-    "eslint:fix": "./node_modules/.bin/eslint '**/*.{js,ts,tsx}' -- --fix",
-    "format": "./node_modules/.bin/prettier-eslint $PWD/'**/*.{js,ts,tsx}' --write"
-},
+    "eslint": "./node_modules/.bin/eslint '**/*.{ts,tsx}'",
+    "eslint:fix": "./node_modules/.bin/eslint '**/*.{ts,tsx}' --fix",
+    "format": "./node_modules/.bin/prettier-eslint $PWD/'**/*.{ts,tsx}' --write",
+    "build": "./node_modules/.bin/tsc --build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Nikidze/web-logger.git"
@@ -27,13 +28,26 @@
   },
   "homepage": "https://github.com/Nikidze/web-logger#readme",
   "devDependencies": {
+    "@babel/preset-typescript": "^7.12.7",
+    "bable-loader": "^0.0.1-security",
     "eslint": "^7.17.0",
+    "html-webpack-plugin": "^4.5.1",
     "prettier-eslint": "^12.0.0",
-    "prettier-eslint-cli": "^5.0.0"
+    "prettier-eslint-cli": "^5.0.0",
+    "source-map-loader": "^2.0.0",
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3",
+    "typescript-loader": "^1.1.3",
+    "webpack": "^5.12.2",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1",
+    "webpack-merge": "^5.7.3"
   },
   "dependencies": {
+    "@babel/core": "^7.12.10",
     "@typescript-eslint/eslint-plugin": "^4.12.0",
     "@typescript-eslint/parser": "^4.12.0",
+    "babel-loader": "^8.2.2",
     "eslint-config-airbnb-base": "^14.2.1"
   }
 }
